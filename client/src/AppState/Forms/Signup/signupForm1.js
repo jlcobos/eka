@@ -1,0 +1,45 @@
+export const signupForm1 = {
+    formName: "signupForm1",
+
+    formElements: [
+        {
+            id: "signupUserName",
+            name: "userName",
+            displayName: "User Name",
+            inputType: "text",
+            value: "",
+            required: true,
+            validationType: "text",
+            minLength: 1,
+            maxLength: 40,
+            valid: true,
+            errorMessage: "",
+        },
+        {
+            id: "signupEmail",
+            name: "email",
+            displayName: "Email",
+            inputType: "email",
+            value: "",
+            required: true,
+            validationType: "email",
+            minLength: false,
+            maxLength: 100,
+            valid: true,
+            errorMessage: "",
+        },
+        {
+            id: "signupPassword",
+            name: "password",
+            displayName: "Password",
+            inputType: "password",
+            value: "",
+            required: true,
+            validationType: "text",
+            minLength: 8,
+            maxLength: 16,
+            valid: true,
+            errorMessage: "",
+        },
+    ]
+}

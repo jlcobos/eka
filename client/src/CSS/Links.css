@@ -1,0 +1,5 @@
+/* unvisited link */
+a:link, a:visited, a:hover, a:active {
+    color: #FFF;
+    text-decoration: none;
+}
