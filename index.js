@@ -6,8 +6,8 @@ const path = require("path");
 const PORT = process.env.PORT || 8080;
 
 import cors from 'cors';
-import models, { sequelize } from './models';
-import routes from '.server/routes';
+// import models, { sequelize } from './server/models';
+import routes from './server/routes';
 
 const app = express();
 app.use(cors());
