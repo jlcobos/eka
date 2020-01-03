@@ -19,8 +19,11 @@ app.set('trust proxy', true);
 app.use('/api', routes.user);
 
 
-app.get("/*", function(req, res) {   
-    res.sendFile(path.join(__dirname, './client/build', 'index.html'));
-});
+if (process.env.NODE_ENV === "production") {
+    app.get("/*", function(req, res) {   
+        res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+    });
+}
+
 
 app.listen(PORT, () => console.log(`🌎 ==> Server now on running port ${PORT}!`));
