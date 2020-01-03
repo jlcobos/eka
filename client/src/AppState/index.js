@@ -49,7 +49,9 @@ export class AppStateProvider extends React.Component {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),    
-        }).then(res => JSON.parse(res)).then(res => console.log(res));
+        })
+        .then(res => console.log(res))
+        .then(res => console.log(res));
     }
 
     render(){

@@ -4,6 +4,7 @@ const bodyParser =  require('body-parser');
 const router = Router();
 
 router.post('/new-user', async (req, res) => {
+    console.log("new user route");
     const user = await models.User.create({
         userName: req.body.userName,
         firstName: req.body.firstName,
