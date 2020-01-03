@@ -43,7 +43,7 @@ export class AppStateProvider extends React.Component {
             state: "tate",
             zip: "zip",
         }
-        fetch("http://localhost:8080/api/new-user", {
+        fetch("/api/new-user", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
