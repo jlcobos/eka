@@ -50,7 +50,6 @@ export class AppStateProvider extends React.Component {
             },
             body: JSON.stringify(data),    
         })
-        .then(res => console.log(res))
         .then(res => console.log(res));
     }
 
