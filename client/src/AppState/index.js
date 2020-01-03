@@ -30,7 +30,7 @@ export class AppStateProvider extends React.Component {
 
 
     test = () => {
-
+        console.log("test");
         const data = {
             userName: "userName",
             firstName: "firstName",

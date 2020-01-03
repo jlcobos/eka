@@ -7,13 +7,13 @@ const PORT = process.env.PORT || 8080;
 
 import cors from 'cors';
 import models, { sequelize } from './models';
-import routes from './routes';
+import routes from '.server/routes';
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, './client/build')));
 app.set('trust proxy', true);
 
 app.use('/api', routes.user);
@@ -21,7 +21,7 @@ app.use('/api', routes.user);
 
 if (process.env.NODE_ENV === "production") {
     app.get("/*", function(req, res) {   
-        res.sendFile(path.join(__dirname, 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, './client/build', 'index.html'));
     });
 }
 
